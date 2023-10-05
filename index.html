@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youtube</title>
+  </head>
+  <script
+    src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    data-auto-replace-svg="nest"
+  ></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Open+Sans:ital,wght@1,300&family=Roboto:wght@100&family=Unna:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    #search_results {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+    #header {
+      display: flex;
+      justify-content: space-around;
+    }
+    #search {
+      margin: auto;
+    }
+    input {
+      width: 360px;
+      height: 30px;
+    }
+    #butto {
+      height: 35px;
+      width: 100px;
+      background-color: #f05353;
+      color: white;
+      border: none;
+    }
+    #cont {
+      display: flex;
+    }
+    .p {
+      height: 40px;
+      width: 180px;
+      margin-bottom: 10px;
+      border: none;
+      margin-right: 10px;
+    }
+    .p:hover,
+    #butto {
+      background-color: #f05353;
+      color: white;
+      cursor: pointer;
+      border: none;
+      /* font-size: large; */
+    }
+    .q {
+      font-size: 30px;
+      text-align: center;
+      margin: 20px;
+    }
+    #e {
+      font-size: 20px;
+      margin: 10px;
+    }
+    #justify {
+      font-size: 23px;
+      margin-top: 30px;
+      margin-left: 25px;
+      /* margin: 30px; */
+    }
+    #row {
+      margin-left: 100px;
+    }
+    .arr {
+      margin-left: 30px;
+    }
+    .all {
+      border-radius: 12px;
+      margin-left: 20px;
+      border: none;
+      height: 30px;
+      font-size: 17px;
+      background-color: rgb(204, 197, 197);
+    }
+    #user_name{
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+    }
+ 
+ #Sign{ 
+  display: flex;
+ } 
+ 
+ #Sign > button{
+    background-color: #f05353;
+     border: none;
+    height: 35px;
+    width: 100px;
+    margin-right: 2%;
+
+}
+ #Sign > button > a{
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+ }
+
+  </style>
+  <body> 
+    <header>
+      <div id="header">
+        <div id="justify"><i class="fas fa-align-justify"></i></div>
+        <a href="youtube.html">
+          <div id="image">
+          <img
+            src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-970-80.jpg.webp"
+            height="80px"
+            width="180px"
+          />
+        </div>
+        </a>
+        <div id="search">
+          <input
+            type="text"
+            id="video"
+            placeholder="What are you looking for .."
+          />
+          <button id="butto" onclick="searchVideo()">Search</button>
+          <i id="e" class="fas fa-microphone"></i>
+        </div>
+      <div id="Sign">
+  <button>
+    <a href="sign.html">Create </a>
+  </button>
+
+  <button><a href="sign.html">Login</a></button>
+</div>
+        <!-- <i class="fas fa-microphone"></i> -->
+        <div>
+          <i  class="q fas fa-moon" onclick="dark()"></i>
+          <!-- <i id="q" class="fas fa-download"></i> -->
+          <i  class=" q fas fa-folder-plus"></i>
+          <i  class=" q fas fa-braille"></i>
+          <i  class=" q fas fa-bell"></i>
+          <!-- <i id="q" class="fa-solid fa-moon" onclick="dark()"></i> -->
+        </div> 
+      </div>
+    </header>
+    <hr />
+    <div id="user_name">
+      <div><p>Hello ,Yogesh</p>
+</div>
+    <div id="row">
+      
+      <button style="background-color: black; color: white" class="all">  
+        All  
+      </button>
+      <!-- <button class="all">Tesla</button> -->
+      <button class="all">Apple</button>
+      <button class="all">Lo-Fi</button>
+      <button class="all">13 PRO max</button
+      ><button class="all">JavaScript</button>
+      <button class="all">Arijit</button
+      ><button class="all">Code with harry</button>
+      <button class="all">Shinchan</button>
+      <!-- <button class="all">Phython</button> -->
+      <button class="all">Online</button>
+      <button class="all">Bitcoin</button>
+      <button class="all">live</button>
+      <button class="all">Carryminati</button>
+      <button class="all">Music</button>
+      <i class="arr fas fa-chevron-right"></i>
+    </div>
+    </div>
+    <hr />
+    <div id="cont">
+      <div id="label">
+        <a href="youtube.html">        <button class="p"><i class="fas fa-home"></i>  Home</button> <br />
+</a>
+        <button class="p"><i class="far fa-compass"></i>  Explore</button><br />
+        <button class="p"> <i class="fas fa-play-circle"></i> Subscription</button> <br />
+        <button class="p"><i class="fas fa-history"> </i>  History</button>
+        <hr />
+        <button class="p"> <i class="fas fa-clock"></i> </i>  Watch later</button>
+        <br />
+        <button class="p"><i class="fas fa-book-open"></i>  Library</button>
+        <br />
+        <button class="p"><i class="fas fa-thumbs-up"></i>  Liked Videos</button>
+        <hr />
+      </div>
+
+      <div id="search_results"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+   
+
+
+
+let url = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&maxResults=20&key=AIzaSyA2YZKo5xi7ONczJP8MGGl2a98QQn-nC5o";
+
+mostPopular();
+
+async function mostPopular(){
+
+    try{
+        let res = await fetch(url);
+
+        let data = await res.json();
+        console.log("data", data);
+
+        let array_of_videos = data.items;
+ localStorage.setItem("local", JSON.stringify(array_of_videos))
+        appendVideos(array_of_videos);
+        
+
+    }
+
+    catch (err){
+        console.log("err:", err);
+    }
+
+}
+
+
+
+  const API = "AIzaSyBhvSCDIGP-s1940tmSJlL6gwY9bjroA2U";
+
+  const result_div = document.getElementById("search_results");
+
+  async function searchVideo() {
+    try {
+      let video_query = document.getElementById("video").value;
+
+      let response = await fetch(
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${video_query}&type=video&key=${API}&maxResults=20&part=snippet`
+      );
+
+      let data = await response.json();
+      let videos = data.items;
+      console.log("data", data);
+      // console.log(items)
+
+      appendVideos(videos);
+    } catch (e) {
+      console.log("e", e);
+    }
+  }
+
+  const appendVideos = (items) => {
+    result_div.innerHTML = null;
+
+    items.forEach(({ snippet, id: { videoId } }) => {
+      console.log(snippet);
+      var image = document.createElement("img");
+      let iframe = document.createElement("iframe");
+      let title = document.createElement("p");
+      // title.setAttribute ="class , titlee";
+      var div = document.createElement("div");
+      image.src = snippet.thumbnails.medium.url;
+      title.innerText = snippet.title;
+      var p = document.createElement("p");
+      p.innerText= snippet.channelTitle;
+
+      var move = {
+        snippet,
+        videoId,
+        p,
+      };
+      div.onclick = () => {
+        Show(move);
+      };
+
+      div.append(image, title ,p);
+      result_div.append(div);
+    });
+  };
+  function Show(data) {
+    localStorage.setItem("clicked_video", JSON.stringify(data));
+    
+    window.location.href = "video.html";
+  }
+  function dark() {
+    document.body.style.backgroundColor = "black";
+  }
+</script>

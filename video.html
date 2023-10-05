@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youtubevideo</title>
+
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Open+Sans:ital,wght@1,300&family=Roboto:wght@100&family=Unna:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      #q {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      #e {
+        font-size: 20px;
+        margin: 10px;
+      }
+      #navbar {
+        height: 100px;
+        /* border: 1px solid teal; */
+      }
+      #main {
+        display: flex;
+        /* border: 1px solid teal; */
+        height: 600px;
+      }
+      #video_detail {
+        flex: 4;
+        /* border: 1px solid teal; */
+      }
+      #recom {
+        flex: 1;
+        /* border: 1px solid teal; */
+      }
+      #header {
+        display: flex;
+        justify-content: space-around;
+      }
+      #search {
+        margin: auto;
+      }
+      input {
+        width: 360px;
+        height: 30px;
+      }
+
+      #justify {
+        font-size: 23px;
+        margin-top: 30px;
+        margin-left: 25px;
+        /* margin: 30px; */
+      }
+      #butto {
+        height: 35px;
+        width: 100px;
+        background-color: #f05353;
+        color: white;
+        border: none;
+      }
+      #video_detail > p {
+        font-size: 35px;
+      }
+      #recom {
+        padding: 5px;
+        border: 1px solid black;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        overflow: scroll;
+      }
+      #recom > p {
+        font-size: 20px;
+      }
+
+      #recom > div > img {
+        height: 100px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="header">
+        <div id="justify"><i class="fas fa-align-justify"></i></div>
+
+        <div id="image">
+          <img
+            src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-970-80.jpg.webp"
+            height="80px"
+            width="180px"
+          />
+        </div>
+        <div id="search">
+          <input
+            type="text"
+            id="video"
+            placeholder="What are you looking for .."
+          />
+          <button id="butto" onclick="searchVideo()">Search</button>
+          <i id="e" class="fas fa-microphone"></i>
+        </div>
+        <!-- <i class="fas fa-microphone"></i> -->
+        <div>
+          <i id="q" class="fas fa-download"></i>
+          <i id="q" class="fas fa-bell"></i>
+        </div>
+      </div>
+    </header>
+    <hr />
+    <div id="main">
+      <div id="video_detail"></div>
+      <div id="recom">
+        <h2>Recommended video</h2>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var getObj = JSON.parse(localStorage.getItem("local"));
+  var recom_div = document.getElementById("recom");
+
+  const appendVideos = (getObj) => {
+    result_div.innerHTML = null;
+
+    getObj.forEach(({ snippet, id: { videoId } }) => {
+      console.log(snippet);
+      var image = document.createElement("img");
+      let iframe = document.createElement("iframe");
+      let title = document.createElement("p");
+      // title.setAttribute ="class , titlee";
+      var div = document.createElement("div");
+      var div2 = document.createElement("div");
+      image.src = snippet.thumbnails.medium.url;
+      title.innerText = snippet.title;
+      var p = document.createElement("p");
+      p.innerText = snippet.channelTitle;
+
+      var move = {
+        snippet,
+        videoId,
+        p,
+      };
+      // div.onclick = () => {
+      //   Show(move);
+      // };
+
+      div2.append(title, p);
+      div.append(image);
+      recom_div.append(div, div2);
+    });
+  };
+
+  var result_div = document.getElementById("video_detail");
+  var recom = document.createElement("div");
+  var div = document.createElement("div");
+  var p = document.createElement("p");
+
+  appendVideos(getObj);
+
+  //  duwe
+  let { videoId } = JSON.parse(localStorage.getItem("clicked_video"));
+  console.log(videoId);
+  let iframe = document.createElement("iframe");
+  iframe.src = `https://www.youtube.com/embed/${videoId}`;
+  iframe.width = "100%";
+  iframe.height = "100%";
+  iframe.setAttribute("allowfullscreen", "true");
+  result_div.append(iframe);
+</script>

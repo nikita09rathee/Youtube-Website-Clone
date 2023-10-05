@@ -1,0 +1,47 @@
+form {
+  width: 40%;
+  height: 500px;
+  margin: auto;
+  /* background-color: white; */
+}
+input {
+  margin-bottom: 10px;
+}
+label {
+  font-size: 20px;
+  /* color: white */
+}
+input[type="submit"] {
+  background-color: #f05353;
+  border: none;
+  color: white;
+  width: 150px;
+  height: 35px;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  font-size: 15px;
+}
+body {
+  background-color: black;
+}
+#main {
+  border: 1px solid white;
+  width: 40%;
+  height: 500px;
+  background-color: white;
+  margin: auto;
+  margin-top: 100px;
+}
+h1 {
+  text-align: center;
+}
+#log {
+  display: flex;
+  margin: auto;
+  /* border: 1px solid teal; */
+  /* width: 80%; */
+  justify-content: space-between;
+  width: 250px;
+}
+
