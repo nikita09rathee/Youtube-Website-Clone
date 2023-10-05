@@ -1,5 +1,5 @@
  # youtube-clone_web_clone
-You can see live demo here : https://upbeat-albattani-6b7dc7.netlify.app/
+You can see live demo here : https://mellow-zuccutto-96c2ef.netlify.app
 
 ## What is Youtube:
 YouTube is a free video sharing website that makes it easy to watch online videos. You can even create and upload your own videos to share with others. Originally created in 2005, YouTube is now one of the most popular sites on the Web, with visitors watching around 6 billion hours of video every month.
@@ -38,7 +38,7 @@ Video Page :
 
 ## Instructions to Run the Code 
 
-- Clone my repository `https://github.com/itsyogihr13/youtube-clone`
+- Clone my repository `https://github.com/nikita09rathee/youtube`
 - Open that code in your VS code `Index.html`
 - Open the `Index.html` on Live server
 - Then you can Navigate through other pages from Landing page like `signin.html`, `Login.html`, `Video.html` etc.
